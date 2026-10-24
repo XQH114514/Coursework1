@@ -5,12 +5,17 @@
 **Student ID:** [Your student ID]  
 **Submission date:** [Date]
 
-## Published websites
+## Submission website addresses
 
-- AI-generated version: https://xqh114514.github.io/Coursework1/
-- Human-designed version: https://xqh114514.github.io/Coursework1/guided.html
-- Source repository: https://github.com/XQH114514/Coursework1
-- Report source: https://github.com/XQH114514/Coursework1/blob/main/report.md
+| Required version | Published website |
+| --- | --- |
+| Version 1: AI-generated | https://xqh114514.github.io/Coursework1/ |
+| Version 2: Human-designed | https://xqh114514.github.io/Coursework1/guided.html |
+
+**Source repository:** https://github.com/XQH114514/Coursework1  
+**Report source:** https://github.com/XQH114514/Coursework1/blob/main/report.md
+
+Both public website links were verified on 24 October 2026.
 
 ## Development process
 

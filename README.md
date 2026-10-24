@@ -3,11 +3,16 @@
 A two-version personal portfolio developed as Coursework Part I for the
 Applications of AI in EEE course.
 
-## Live pages
+## Submission links for assessment
 
-- [AI-generated version](https://xqh114514.github.io/Coursework1/)
-- [Human-designed version](https://xqh114514.github.io/Coursework1/guided.html)
-- [Coursework report](https://github.com/XQH114514/Coursework1/blob/main/report.md)
+> **Published websites**
+>
+> - **Version 1 - AI-generated:** https://xqh114514.github.io/Coursework1/
+> - **Version 2 - Human-designed:** https://xqh114514.github.io/Coursework1/guided.html
+>
+> **Supporting document:** https://github.com/XQH114514/Coursework1/blob/main/report.md
+
+Both public website links were verified on 24 October 2026.
 
 ## Versions
 
