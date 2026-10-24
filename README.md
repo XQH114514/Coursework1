@@ -14,7 +14,7 @@ in EEE course.
 
 Both public website links were verified on 24 October 2026.
 
-## Current version
+## Versions
 
 ### Version 1: AI-generated
 
