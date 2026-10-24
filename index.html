@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio for an AI and computer science student.">
+  <title>Your Name | AI &amp; Systems</title>
+  <style>
+    :root {
+      --ink: #101312;
+      --ink-soft: #191d1b;
+      --paper: #f2f1e9;
+      --muted: #a7aaa5;
+      --line: rgba(242, 241, 233, 0.18);
+      --accent: #c7f36b;
+      --coral: #ff7a66;
+      --content: min(1180px, calc(100vw - 48px));
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    ::selection {
+      color: var(--ink);
+      background: var(--accent);
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 30;
+      padding: 10px 14px;
+      color: var(--ink);
+      background: var(--accent);
+      transform: translateY(-160%);
+      transition: transform 180ms ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(16, 19, 18, 0.82);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      width: var(--content);
+      min-height: 70px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 5px rgba(199, 243, 107, 0.12);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      transition: color 160ms ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--paper);
+    }
+
+    .version-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--accent);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .hero {
+      position: relative;
+      width: var(--content);
+      min-height: 92vh;
+      margin: 0 auto;
+      padding: 138px 0 84px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+      align-items: center;
+      gap: 64px;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 22px;
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.35rem, 7vw, 7.2rem);
+      font-weight: 400;
+      line-height: 0.92;
+      letter-spacing: -0.055em;
+    }
+
+    h1 span {
+      display: block;
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .hero-summary {
+      max-width: 610px;
+      margin: 30px 0 0;
+      color: #c9ccc7;
+      font-size: clamp(1rem, 1.4vw, 1.2rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 36px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border: 1px solid var(--paper);
+      border-radius: 4px;
+      color: var(--ink);
+      background: var(--paper);
+      font-size: 0.88rem;
+      font-weight: 750;
+      text-decoration: none;
+      transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      border-color: var(--accent);
+      color: var(--ink);
+      background: var(--accent);
+    }
+
+    .button.secondary {
+      color: var(--paper);
+      border-color: var(--line);
+      background: transparent;
+    }
+
+    .button.secondary:hover,
+    .button.secondary:focus-visible {
+      border-color: var(--paper);
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    .portrait-wrap {
+      position: relative;
+      min-height: 540px;
+      isolation: isolate;
+    }
+
+    .portrait-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 9% -12% 3% 8%;
+      z-index: -1;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(rgba(199, 243, 107, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(199, 243, 107, 0.08) 1px, transparent 1px);
+      background-size: 34px 34px;
+      transform: rotate(4deg);
+    }
+
+    .portrait-wrap::after {
+      content: "01";
+      position: absolute;
+      right: -16px;
+      bottom: 8px;
+      z-index: 2;
+      color: var(--ink);
+      background: var(--accent);
+      font: 700 0.78rem/1 "Segoe UI", sans-serif;
+      padding: 10px 12px;
+      letter-spacing: 0.12em;
+    }
+
+    .portrait {
+      position: absolute;
+      inset: 0 0 44px 0;
+      width: 100%;
+      height: calc(100% - 44px);
+      object-fit: cover;
+      object-position: center;
+      border: 1px solid var(--line);
+      filter: grayscale(1) contrast(1.12) brightness(0.74);
+    }
+
+    .portrait-caption {
+      position: absolute;
+      left: 16px;
+      bottom: 62px;
+      z-index: 2;
+      max-width: 240px;
+      padding: 10px 12px;
+      color: var(--paper);
+      border-left: 2px solid var(--coral);
+      background: rgba(16, 19, 18, 0.74);
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .signal-strip {
+      overflow: hidden;
+      border-block: 1px solid var(--line);
+      background: var(--accent);
+      color: var(--ink);
+    }
+
+    .signal-track {
+      width: max-content;
+      padding: 13px 0;
+      display: flex;
+      gap: 34px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      animation: drift 24s linear infinite;
+    }
+
+    .signal-track span::after {
+      content: "+";
+      margin-left: 34px;
+    }
+
+    @keyframes drift {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .section {
+      width: var(--content);
+      margin: 0 auto;
+      padding: 110px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 0.38fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .section-index {
+      margin: 0;
+      color: var(--coral);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.2rem, 4vw, 4.4rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .section-copy {
+      max-width: 780px;
+      margin: 24px 0 0;
+      color: #c9ccc7;
+      font-size: clamp(1.05rem, 1.6vw, 1.32rem);
+    }
+
+    .work-list {
+      margin-top: 64px;
+      border-top: 1px solid var(--line);
+    }
+
+    .work-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 70px minmax(0, 1.2fr) minmax(200px, 0.8fr);
+      gap: 24px;
+      align-items: start;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+      transition: color 170ms ease, padding 170ms ease;
+    }
+
+    .work-item:hover,
+    .work-item:focus-visible {
+      color: var(--accent);
+      padding-left: 12px;
+    }
+
+    .work-number {
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+    }
+
+    .work-title {
+      margin: 0;
+      font-size: clamp(1.35rem, 2.3vw, 2.15rem);
+      font-weight: 550;
+      letter-spacing: -0.03em;
+    }
+
+    .work-meta {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+      margin-top: 56px;
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .skill {
+      min-height: 180px;
+      padding: 26px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .skill h3 {
+      margin: 0 0 15px;
+      color: var(--accent);
+      font-size: 0.76rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .skill p {
+      margin: 0;
+      color: #c9ccc7;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 64px;
+      align-items: end;
+    }
+
+    .contact h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 6vw, 6.8rem);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-links a {
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+      color: #d8dad6;
+    }
+
+    .contact-links a:hover,
+    .contact-links a:focus-visible {
+      color: var(--accent);
+    }
+
+    footer {
+      width: var(--content);
+      margin: 0 auto;
+      padding: 30px 0 40px;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      color: var(--muted);
+      font-size: 0.76rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding-top: 132px;
+      }
+
+      .portrait-wrap {
+        min-height: 460px;
+      }
+
+      .section-head,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      :root {
+        --content: calc(100vw - 32px);
+      }
+
+      .header-inner {
+        min-height: 64px;
+      }
+
+      .nav-links a:not(.version-pill) {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 112px;
+        padding-bottom: 64px;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 16vw, 4.7rem);
+      }
+
+      .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .portrait-wrap {
+        min-height: 360px;
+      }
+
+      .section {
+        padding: 76px 0;
+      }
+
+      .work-item {
+        grid-template-columns: 42px 1fr;
+      }
+
+      .work-meta {
+        grid-column: 2;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skill {
+        min-height: auto;
+      }
+
+      .contact {
+        gap: 38px;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Your Name, home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Your Name</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+        <a class="version-pill" href="guided.html">Version 02</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">AI student &middot; builder &middot; researcher</p>
+        <h1>Ideas into <span>intelligent systems.</span></h1>
+        <p class="hero-summary">
+          I am an artificial intelligence student exploring how machine learning,
+          thoughtful interfaces, and clear communication can turn complex technology
+          into useful everyday tools.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#work">Explore selected work</a>
+          <a class="button secondary" href="#contact">Start a conversation</a>
+        </div>
+      </div>
+
+      <figure class="portrait-wrap" aria-label="Abstract artificial intelligence visual">
+        <img
+          class="portrait"
+          src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+          alt="Abstract visualization of a neural network"
+          loading="eager"
+          referrerpolicy="no-referrer"
+        >
+        <figcaption class="portrait-caption">Replace this visual with your own portrait or project image.</figcaption>
+      </figure>
+    </section>
+
+    <div class="signal-strip" aria-hidden="true">
+      <div class="signal-track">
+        <span>Machine learning</span>
+        <span>Human-centered design</span>
+        <span>Research</span>
+        <span>Computer vision</span>
+        <span>Machine learning</span>
+        <span>Human-centered design</span>
+        <span>Research</span>
+        <span>Computer vision</span>
+      </div>
+    </div>
+
+    <section class="section" id="about">
+      <div class="section-head">
+        <p class="section-index">01 / About</p>
+        <div>
+          <h2 class="section-title">Curious about what intelligence can become.</h2>
+          <p class="section-copy">
+            I am studying artificial intelligence with a growing focus on machine
+            learning systems, computer vision, and responsible product design. I enjoy
+            moving between research and implementation: reading the theory, testing an
+            idea, and shaping the result into something people can actually use.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-head">
+        <p class="section-index">02 / Selected work</p>
+        <div>
+          <h2 class="section-title">A few things I have been building.</h2>
+        </div>
+      </div>
+
+      <div class="work-list">
+        <a class="work-item" href="#contact">
+          <span class="work-number">01</span>
+          <div>
+            <h3 class="work-title">Context-aware study assistant</h3>
+            <p class="work-meta">Machine learning / product prototype</p>
+          </div>
+          <p class="work-meta">
+            An experiment in turning course materials into focused, interactive review sessions.
+          </p>
+        </a>
+        <a class="work-item" href="#contact">
+          <span class="work-number">02</span>
+          <div>
+            <h3 class="work-title">Visual pattern explorer</h3>
+            <p class="work-meta">Computer vision / research</p>
+          </div>
+          <p class="work-meta">
+            A small interface for inspecting how a vision model groups and classifies everyday images.
+          </p>
+        </a>
+        <a class="work-item" href="#contact">
+          <span class="work-number">03</span>
+          <div>
+            <h3 class="work-title">Data stories for everyone</h3>
+            <p class="work-meta">Data visualization / communication</p>
+          </div>
+          <p class="work-meta">
+            A collection of visual notes that make technical datasets easier to question and understand.
+          </p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-head">
+        <p class="section-index">03 / Capabilities</p>
+        <div>
+          <h2 class="section-title">Technical range, practical mindset.</h2>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill">
+          <h3>Build</h3>
+          <p>Python, JavaScript, HTML and CSS, data processing, and rapid prototyping.</p>
+        </article>
+        <article class="skill">
+          <h3>Explore</h3>
+          <p>Machine learning, computer vision, model evaluation, and experimental design.</p>
+        </article>
+        <article class="skill">
+          <h3>Communicate</h3>
+          <p>Research synthesis, visual storytelling, documentation, and collaborative problem solving.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <h2>Let us make something thoughtful.</h2>
+      <div class="contact-links">
+        <a href="mailto:you@example.com">you@example.com</a>
+        <a href="https://github.com/XQH114514" rel="noreferrer">GitHub</a>
+        <a href="guided.html">View the guided version</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>&copy; 2026 Your Name</span>
+    <span>AI-generated portfolio / Version 01</span>
+  </footer>
+</body>
+</html>
