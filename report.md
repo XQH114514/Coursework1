@@ -10,12 +10,12 @@
 | Required version | Published website |
 | --- | --- |
 | Version 1: AI-generated | https://xqh114514.github.io/Coursework1/ |
-| Version 2: Human-designed | To be completed independently |
+| Version 2: Human-designed | https://xqh114514.github.io/Coursework1/me-designed.html |
 
 **Source repository:** https://github.com/XQH114514/Coursework1  
 **Report source:** https://github.com/XQH114514/Coursework1/blob/main/report.md
 
-The Version 1 public website link was verified on 24 October 2026.
+Both public website links were verified on 24 October 2026.
 
 ## Development process
 
@@ -40,11 +40,18 @@ Key workflow:
 4. Test image loading, navigation, text wrapping, and horizontal overflow.
 5. Publish the page from the root of the `main` branch using GitHub Pages.
 
-### Version 2: Work in progress
+### Version 2: Human-designed page
 
-The previous Version 2 file was removed because it was not personally designed
-by the student. A replacement will be developed independently and added after
-its design, content, and implementation have been reviewed by the student.
+Version 2 was specified by the student with three core requirements: keep the
+same professional information, use a personal photograph, and create a white
+page that is visibly different from Version 1. The resulting design is a clean,
+photo-led portfolio with a large name treatment, a light visual system, concise
+profile facts, evidence-oriented project records, education, capabilities, and
+contact details.
+
+The portrait was resized and stripped of metadata before publication. The page
+uses embedded CSS, responsive layouts, semantic sections, accessible focus states,
+and a print stylesheet.
 
 ## Git and GitHub workflow
 
@@ -59,11 +66,20 @@ keeps the deployed site synchronized with the versioned source files. README.md
 documents the live links, file structure, local preview command, deployment
 method, and maintenance process.
 
-## Version comparison status
+## Comparison and evaluation
 
-The two-version comparison will be completed after the student independently
-creates Version 2. This avoids presenting another person's design as the
-student's own work.
+| Dimension | Version 1: AI-generated | Version 2: Human-designed |
+| --- | --- | --- |
+| Visual direction | Dark, expressive and editorial | White, light and portrait-led |
+| Main image | Abstract technology visual | Personal photograph |
+| Information order | About, projects, capabilities, background | Identity, projects, education, capabilities |
+| Navigation | Compact top navigation | Minimal top navigation |
+| Design input | High-level brief with more decisions delegated to AI | Student-defined requirements and content |
+| Main strength | Strong visual contrast and atmosphere | Personal identity, clarity and readability |
+
+Version 1 emphasizes visual impact, while Version 2 makes the person and
+professional evidence immediately visible. Both versions use the same core
+information but present it through different layouts and visual systems.
 
 ## Personal reflection
 
