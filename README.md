@@ -54,7 +54,7 @@ triggers a new deployment automatically.
 ## Maintenance workflow
 
 1. Edit the relevant HTML or documentation file.
-2. Preview both pages at desktop and mobile widths.
+2. Preview the portfolio at desktop and mobile widths.
 3. Check links, images, text overflow, and privacy-sensitive content.
 4. Commit with a short, descriptive message.
 5. Confirm the GitHub Pages deployment completed successfully.
