@@ -13,6 +13,8 @@
 | Version 2: Human-designed | https://xqh114514.github.io/Coursework1/me-designed.html |
 | Fuzzy decision project profile | https://xqh114514.github.io/Coursework1/fuzzy-project.html |
 | Public project report (PDF) | https://xqh114514.github.io/Coursework1/fuzzy-project-paper.pdf |
+| Freight forecasting project profile | https://xqh114514.github.io/Coursework1/freight-forecasting.html |
+| Credit risk project profile | https://xqh114514.github.io/Coursework1/credit-risk.html |
 
 **Source repository:** https://github.com/XQH114514/Coursework1  
 **Report source:** https://github.com/XQH114514/Coursework1/blob/main/report.md

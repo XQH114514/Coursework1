@@ -35,6 +35,9 @@ a different information hierarchy from Version 1.
 - `me-designed.html` - human-designed portfolio page
 - `fuzzy-project.html` - detailed research project profile
 - `fuzzy-project-paper.pdf` - public project report with contact details removed
+- `freight-forecasting.html` - freight forecasting and workforce scheduling profile
+- `credit-risk.html` - credit risk modeling profile
+- `project-case.css` - shared styling for applied project pages
 - `profile-photo.jpg` - optimized portrait with metadata removed
 - `report.md` - coursework report draft
 - `README.md` - repository and maintenance documentation
