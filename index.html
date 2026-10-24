@@ -303,6 +303,36 @@
       text-transform: uppercase;
     }
 
+    .hero-facts {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin: 40px 0 0;
+      padding: 20px 0 0;
+      border-top: 1px solid var(--line);
+      list-style: none;
+    }
+
+    .hero-facts li {
+      min-width: 0;
+    }
+
+    .hero-facts strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--accent);
+      font-size: 0.92rem;
+    }
+
+    .hero-facts span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.72rem;
+      line-height: 1.4;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
     .signal-strip {
       overflow: hidden;
       border-block: 1px solid var(--line);
@@ -407,6 +437,29 @@
       margin: 4px 0 0;
       color: var(--muted);
       font-size: 0.9rem;
+    }
+
+    .work-detail {
+      margin: 0;
+    }
+
+    .work-detail p {
+      margin: 0 0 12px;
+      color: #c9ccc7;
+      font-size: 0.9rem;
+    }
+
+    .work-detail p:last-child {
+      margin-bottom: 0;
+    }
+
+    .work-detail strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--accent);
+      font-size: 0.66rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
     .project-tags {
@@ -589,6 +642,11 @@
         grid-template-columns: 1fr;
       }
 
+      .hero-facts {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
       .button {
         width: 100%;
       }
@@ -605,7 +663,8 @@
         grid-template-columns: 42px 1fr;
       }
 
-      .work-meta {
+      .work-meta,
+      .work-detail {
         grid-column: 2;
       }
 
@@ -659,7 +718,6 @@
         <a href="#work">Work</a>
         <a href="#background">Background</a>
         <a href="#contact">Contact</a>
-        <a class="version-pill" href="guided.html">Version 02</a>
       </nav>
     </div>
   </header>
@@ -679,6 +737,20 @@
           <a class="button" href="#work">Explore selected work</a>
           <a class="button secondary" href="#contact">Start a conversation</a>
         </div>
+        <ul class="hero-facts" aria-label="Profile at a glance">
+          <li>
+            <strong>MSc student</strong>
+            <span>Electronic Communications and Computer Engineering</span>
+          </li>
+          <li>
+            <strong>Quantitative foundation</strong>
+            <span>Information and Computing Science</span>
+          </li>
+          <li>
+            <strong>Applied focus</strong>
+            <span>Data, modeling, optimization and AI</span>
+          </li>
+        </ul>
       </div>
 
       <figure class="portrait-wrap" aria-label="Abstract artificial intelligence visual">
@@ -718,6 +790,11 @@
             across the full analytical process: framing a problem, preparing the data,
             selecting a model, evaluating the result, and communicating what it means.
           </p>
+          <p class="section-copy">
+            My current interests center on predictive analytics, optimization, risk
+            modeling, and intelligent systems. I value clear assumptions, reproducible
+            analysis, and conclusions that are useful to the people making decisions.
+          </p>
         </div>
       </div>
     </section>
@@ -742,9 +819,18 @@
               <li>Heuristic search</li>
             </ul>
           </div>
-          <p class="work-meta">
-            Built 30-day and hourly freight forecasts, then used heuristic search to balance permanent and temporary staffing.
-          </p>
+          <div class="work-detail">
+            <p>
+              <strong>Analytical problem</strong>
+              Produce reliable total and hourly freight forecasts from incomplete,
+              noisy operational data.
+            </p>
+            <p>
+              <strong>Output</strong>
+              Forecasts, a balanced staffing schedule, visual analysis, and a written
+              recommendation for labor allocation.
+            </p>
+          </div>
         </article>
         <article class="work-item">
           <span class="work-number">02</span>
@@ -757,9 +843,18 @@
               <li>Model evaluation</li>
             </ul>
           </div>
-          <p class="work-meta">
-            Combined customer, transaction, and lending data into credit-scoring and risk-segmentation models.
-          </p>
+          <div class="work-detail">
+            <p>
+              <strong>Analytical problem</strong>
+              Turn multi-source customer, transaction, and lending records into a
+              consistent view of credit risk.
+            </p>
+            <p>
+              <strong>Output</strong>
+              User profiles, credit score and risk-segmentation models, evaluation
+              results, and business recommendations.
+            </p>
+          </div>
         </article>
         <article class="work-item">
           <span class="work-number">03</span>
@@ -772,9 +867,17 @@
               <li>Research</li>
             </ul>
           </div>
-          <p class="work-meta">
-            Studied how fuzzy methods handle uncertainty and multiple criteria in complex real-world decisions.
-          </p>
+          <div class="work-detail">
+            <p>
+              <strong>Research question</strong>
+              How can decision methods remain reliable when criteria and information
+              are uncertain or imprecise?
+            </p>
+            <p>
+              <strong>Contribution</strong>
+              Method analysis and applied case work for a national innovation project.
+            </p>
+          </div>
         </article>
       </div>
     </section>
@@ -800,6 +903,14 @@
           <h3>Communicate</h3>
           <p>Turning analytical results into reports, visualizations, and recommendations for real decisions.</p>
         </article>
+        <article class="skill">
+          <h3>Version control</h3>
+          <p>Git and GitHub for change tracking, documentation, remote backup, and GitHub Pages deployment.</p>
+        </article>
+        <article class="skill">
+          <h3>Problem solving</h3>
+          <p>Breaking ambiguous questions into measurable tasks, testing assumptions, and evaluating alternatives.</p>
+        </article>
       </div>
     </section>
 
@@ -815,22 +926,22 @@
         <article class="background-item">
           <p class="background-time">Sep 2026 - Nov 2027 / Expected</p>
           <h3>MSc Electronic Communications and Computer Engineering</h3>
-          <p>University of Nottingham Ningbo China</p>
+          <p>University of Nottingham Ningbo China. Relevant study includes AI and intelligent systems, advanced computational engineering, digital signal processing, and programmable logic devices.</p>
         </article>
         <article class="background-item">
           <p class="background-time">Sep 2022 - Jun 2026</p>
           <h3>BSc Information and Computing Science</h3>
-          <p>Nanchang University</p>
+          <p>Nanchang University. Core study in mathematical analysis, linear algebra, data structures, modeling, information theory, optimization, and multivariate statistics.</p>
         </article>
         <article class="background-item">
           <p class="background-time">Awards</p>
           <h3>Provincial Second Prize</h3>
-          <p>National College Student Mathematics Competition</p>
+          <p>National College Student Mathematics Competition, plus a university-level second-class scholarship.</p>
         </article>
         <article class="background-item">
           <p class="background-time">Languages &amp; certification</p>
           <h3>CET-6 / IELTS 6.0</h3>
-          <p>Computer Rank Examination Level 2 and Mandarin Level 2B</p>
+          <p>Computer Rank Examination Level 2 and Mandarin Level 2B, supporting technical study and communication.</p>
         </article>
       </div>
     </section>
@@ -841,7 +952,6 @@
         <a href="mailto:sgxqx1@nottingham.edu.cn">sgxqx1@nottingham.edu.cn</a>
         <a href="https://github.com/XQH114514" rel="noreferrer">GitHub</a>
         <a href="https://github.com/XQH114514/Coursework1/blob/main/report.md" rel="noreferrer">Coursework report</a>
-        <a href="guided.html">View the human-designed version</a>
       </div>
     </section>
   </main>

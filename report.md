@@ -10,12 +10,12 @@
 | Required version | Published website |
 | --- | --- |
 | Version 1: AI-generated | https://xqh114514.github.io/Coursework1/ |
-| Version 2: Human-designed | https://xqh114514.github.io/Coursework1/guided.html |
+| Version 2: Human-designed | To be completed independently |
 
 **Source repository:** https://github.com/XQH114514/Coursework1  
 **Report source:** https://github.com/XQH114514/Coursework1/blob/main/report.md
 
-Both public website links were verified on 24 October 2026.
+The Version 1 public website link was verified on 24 October 2026.
 
 ## Development process
 
@@ -40,28 +40,11 @@ Key workflow:
 4. Test image loading, navigation, text wrapping, and horizontal overflow.
 5. Publish the page from the root of the `main` branch using GitHub Pages.
 
-### Version 2: Human-designed page
+### Version 2: Work in progress
 
-Version 2 followed a design specification written before implementation. The
-specification prioritized professional content over decorative effects: a direct
-name-led introduction, scannable profile facts, evidence-oriented project records,
-education, technical methods, qualifications, and contact details. A persistent
-section index supports navigation on larger screens.
-
-The visual direction combined an off-white gridded surface with dark ink, cobalt,
-vermillion, and warm yellow accents. A sticky side panel supports navigation on
-larger screens, while a compact mobile header replaces it on narrow screens.
-Content is presented in explicit sections rather than the more fluid composition
-used in Version 1. A print stylesheet also provides a clean, resume-like output.
-
-Key workflow:
-
-1. Decide what information a recruiter or academic reviewer needs first.
-2. Define the page sections, navigation behavior, typography, color, and spacing.
-3. Use Codex for implementation assistance rather than delegating the design
-   decisions to it.
-4. Test responsive behavior at desktop and mobile widths.
-5. Check navigation, image loading, privacy-sensitive content, and deployment.
+The previous Version 2 file was removed because it was not personally designed
+by the student. A replacement will be developed independently and added after
+its design, content, and implementation have been reviewed by the student.
 
 ## Git and GitHub workflow
 
@@ -76,22 +59,11 @@ keeps the deployed site synchronized with the versioned source files. README.md
 documents the live links, file structure, local preview command, deployment
 method, and maintenance process.
 
-## Comparison and evaluation
+## Version comparison status
 
-| Dimension | Version 1: AI-generated | Version 2: Human-designed |
-| --- | --- | --- |
-| Design direction | Expressive, editorial, high contrast | Structured, systematic, information-led |
-| Navigation | Compact top navigation | Persistent side index on desktop |
-| Information density | Lower, with more visual emphasis | Higher, with clearly separated records |
-| Main strength | Strong first impression and distinctive personality | Clear scanning, comparison, and predictable structure |
-| Main limitation | Less explicit structure for detailed professional information | More formal and visually conservative |
-| Human involvement | High-level goal and review | Detailed layout, content, and behavior requirements |
-| Development experience | Fast exploration with more decisions delegated to AI | More control, but more specification and iteration |
-
-Both versions meet the basic publishing requirement through independent GitHub
-Pages URLs. They are intentionally different in hierarchy and visual rhythm so
-that the comparison focuses on their development approaches rather than small
-cosmetic changes.
+The two-version comparison will be completed after the student independently
+creates Version 2. This avoids presenting another person's design as the
+student's own work.
 
 ## Personal reflection
 

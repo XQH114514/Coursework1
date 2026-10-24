@@ -1,43 +1,40 @@
 # Qihao Xing - Personal Portfolio
 
-A two-version personal portfolio developed as Coursework Part I for the
-Applications of AI in EEE course.
+A personal portfolio developed as Coursework Part I for the Applications of AI
+in EEE course.
 
 ## Submission links for assessment
 
 > **Published websites**
 >
 > - **Version 1 - AI-generated:** https://xqh114514.github.io/Coursework1/
-> - **Version 2 - Human-designed:** https://xqh114514.github.io/Coursework1/guided.html
 >
 > **Supporting document:** https://github.com/XQH114514/Coursework1/blob/main/report.md
 
-Both public website links were verified on 24 October 2026.
+The public website link was verified on 24 October 2026.
 
-## Versions
+## Current version
 
 ### Version 1: AI-generated
 
-`index.html` is the expressive AI-generated version. It uses a dark editorial
-layout with a large visual, project methods, education, capabilities, and contact
-details.
+`index.html` is the expressive AI-generated version. It presents a professional
+profile, detailed project evidence, education, capabilities, awards, contact
+details, and links to the supporting report.
 
-### Version 2: Human-designed
+### Version 2 status
 
-`guided.html` is the human-designed version. The content order and design
-requirements were defined before implementation. It prioritizes readability,
-structured project evidence, and professional presentation on desktop, mobile,
-and in print.
+The previous second version has been removed because it was not personally
+designed by the student. A replacement should be developed independently before
+the final coursework submission.
 
 ## Project files
 
 - `index.html` - AI-generated portfolio page
-- `guided.html` - human-designed portfolio page
 - `report.md` - coursework report draft
 - `README.md` - repository and maintenance documentation
 
-Both web pages are self-contained HTML files with embedded CSS. This keeps the
-deployment simple and allows either version to be reviewed independently.
+The portfolio is a self-contained HTML file with embedded CSS, keeping deployment
+simple and making the page easy to review independently.
 
 ## Local preview
 
@@ -47,8 +44,7 @@ From the repository directory, start a static file server:
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000/` for Version 1 or
-`http://localhost:8000/guided.html` for Version 2.
+Then open `http://localhost:8000/`.
 
 ## Deployment
 
