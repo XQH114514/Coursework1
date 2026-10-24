@@ -535,6 +535,63 @@
       color: var(--ink);
     }
 
+    .competition-note {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 2px solid var(--ink);
+    }
+
+    .competition-note h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.45rem, 2.6vw, 2.1rem);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+
+    .competition-note > p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .competition-facts {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .competition-facts span {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--orange);
+      font-size: 0.64rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .competition-facts strong {
+      display: block;
+      color: var(--ink);
+      font-size: 0.86rem;
+      font-weight: 650;
+      line-height: 1.4;
+    }
+
+    .competition-source {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--green);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-underline-offset: 4px;
+    }
+
     .contact {
       width: var(--content);
       margin: 0 auto;
@@ -707,6 +764,11 @@
 
       .skills-grid {
         grid-template-columns: 1fr;
+      }
+
+      .competition-facts {
+        grid-template-columns: 1fr;
+        gap: 12px;
       }
 
       .contact {
@@ -1004,6 +1066,25 @@
           <li><strong>Award:</strong> Provincial Second Prize, National College Student Mathematics Competition</li>
           <li><strong>Scholarship:</strong> University-level second-class scholarship</li>
         </ul>
+
+        <div class="competition-note">
+          <h3>About the mathematics competition award</h3>
+          <p>
+            The Chinese Mathematics Competitions for College Students (CMC) is a
+            national academic competition hosted by the Chinese Mathematical Society.
+            It aims to strengthen mathematical thinking and problem-solving through
+            challenging problems in advanced mathematics. It has been held annually
+            since 2009 and is organized in a regional preliminary followed
+            by a national final. This provincial second prize was awarded at the
+            preliminary stage.
+          </p>
+          <ul class="competition-facts" aria-label="Competition facts">
+            <li><span>Host</span><strong>Chinese Mathematical Society</strong></li>
+            <li><span>Since</span><strong>2009, held annually</strong></li>
+            <li><span>Stages</span><strong>Regional preliminary and national final</strong></li>
+          </ul>
+          <a class="competition-source" href="https://www.cmathc.org.cn/jianjie/" target="_blank" rel="noopener">Read the official competition overview</a>
+        </div>
       </div>
     </section>
 

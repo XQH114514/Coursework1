@@ -558,6 +558,30 @@
       font-size: 0.9rem;
     }
 
+    .award-facts {
+      display: grid;
+      gap: 5px;
+      margin: 14px 0 0;
+      padding: 0;
+      color: #c9ccc7;
+      font-size: 0.82rem;
+      list-style: none;
+    }
+
+    .award-facts strong {
+      color: var(--paper);
+      font-weight: 700;
+    }
+
+    .award-link {
+      display: inline-block;
+      margin-top: 14px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-underline-offset: 4px;
+    }
+
     .contact {
       display: grid;
       grid-template-columns: 1.3fr 0.7fr;
@@ -956,8 +980,17 @@
         </article>
         <article class="background-item">
           <p class="background-time">Awards</p>
-          <h3>Provincial Second Prize</h3>
-          <p>National College Student Mathematics Competition, plus a university-level second-class scholarship.</p>
+          <h3>National College Student Mathematics Competition</h3>
+          <p>
+            Provincial second prize in the regional preliminary, plus a
+            university-level second-class scholarship.
+          </p>
+          <ul class="award-facts">
+            <li><strong>Host:</strong> Chinese Mathematical Society</li>
+            <li><strong>Format:</strong> Regional preliminary and national final</li>
+            <li><strong>Focus:</strong> Mathematical reasoning and problem solving</li>
+          </ul>
+          <a class="award-link" href="https://www.cmathc.org.cn/jianjie/" target="_blank" rel="noopener">Official competition overview</a>
         </article>
         <article class="background-item">
           <p class="background-time">Languages &amp; certification</p>
