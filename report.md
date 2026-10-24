@@ -1,7 +1,7 @@
 # Coursework Part I: Personal Web Development
 
-**Course:** [Course name]  
-**Student:** [Your name]  
+**Course:** Artificial Intelligence  
+**Student:** Qihao Xing  
 **Student ID:** [Your student ID]  
 **Submission date:** [Date]
 
