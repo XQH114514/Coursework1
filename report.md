@@ -11,6 +11,8 @@
 | --- | --- |
 | Version 1: AI-generated | https://xqh114514.github.io/Coursework1/ |
 | Version 2: Human-designed | https://xqh114514.github.io/Coursework1/me-designed.html |
+| Fuzzy decision project profile | https://xqh114514.github.io/Coursework1/fuzzy-project.html |
+| Public project report (PDF) | https://xqh114514.github.io/Coursework1/fuzzy-project-paper.pdf |
 
 **Source repository:** https://github.com/XQH114514/Coursework1  
 **Report source:** https://github.com/XQH114514/Coursework1/blob/main/report.md

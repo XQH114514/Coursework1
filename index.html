@@ -433,6 +433,17 @@
       letter-spacing: -0.03em;
     }
 
+    .work-title a {
+      text-decoration-color: var(--line);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    .work-title a:hover,
+    .work-title a:focus-visible {
+      color: var(--accent);
+    }
+
     .work-meta {
       margin: 4px 0 0;
       color: var(--muted);
@@ -860,7 +871,9 @@
         <article class="work-item">
           <span class="work-number">03</span>
           <div>
-            <h3 class="work-title">Fuzzy multi-attribute decision making</h3>
+            <h3 class="work-title">
+              <a href="fuzzy-project.html">Fuzzy multi-attribute decision making</a>
+            </h3>
             <p class="work-meta">National innovation project / 2023-2024</p>
             <ul class="project-tags" aria-label="Methods used">
               <li>Decision analysis</li>
@@ -878,6 +891,7 @@
               <strong>Contribution</strong>
               Method analysis and applied case work for a national innovation project.
             </p>
+            <p><a class="button secondary" href="fuzzy-project.html">View project details</a></p>
           </div>
         </article>
       </div>

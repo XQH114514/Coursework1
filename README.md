@@ -9,6 +9,7 @@ in EEE course.
 >
 > - **Version 1 - AI-generated:** https://xqh114514.github.io/Coursework1/
 > - **Version 2 - Human-designed:** https://xqh114514.github.io/Coursework1/me-designed.html
+> - **Fuzzy decision project profile:** https://xqh114514.github.io/Coursework1/fuzzy-project.html
 >
 > **Supporting document:** https://github.com/XQH114514/Coursework1/blob/main/report.md
 
@@ -32,6 +33,8 @@ a different information hierarchy from Version 1.
 
 - `index.html` - AI-generated portfolio page
 - `me-designed.html` - human-designed portfolio page
+- `fuzzy-project.html` - detailed research project profile
+- `fuzzy-project-paper.pdf` - public project report with contact details removed
 - `profile-photo.jpg` - optimized portrait with metadata removed
 - `report.md` - coursework report draft
 - `README.md` - repository and maintenance documentation

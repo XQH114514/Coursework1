@@ -408,6 +408,17 @@
       line-height: 1.25;
     }
 
+    .project h3 a {
+      text-decoration-color: var(--line);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    .project h3 a:hover,
+    .project h3 a:focus-visible {
+      color: var(--orange);
+    }
+
     .project p {
       margin: 9px 0 0;
       color: var(--muted);
@@ -891,7 +902,7 @@
           <article class="project">
             <span class="project-number">03</span>
             <div>
-              <h3>Fuzzy multi-attribute decision making</h3>
+              <h3><a href="fuzzy-project.html">Fuzzy multi-attribute decision making</a></h3>
               <p>
                 Contributed to a national innovation project studying how fuzzy methods
                 handle uncertainty and multiple criteria. The work combined method
@@ -906,6 +917,7 @@
                 <li>Uncertainty</li>
                 <li>Research</li>
               </ul>
+              <p><a class="text-link" href="fuzzy-project.html">Project details</a></p>
             </div>
           </article>
         </div>
