@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Structured personal portfolio for Qihao Xing, a data science and AI graduate student.">
+  <meta name="theme-color" content="#1546d8">
+  <meta property="og:title" content="Qihao Xing | Data Science &amp; AI">
+  <meta property="og:description" content="A human-designed professional portfolio focused on data analysis, predictive modeling, and applied AI.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231546d8'/%3E%3Ctext x='32' y='42' text-anchor='middle' fill='%23ffffff' font-family='Arial' font-size='27' font-weight='700'%3EQX%3C/text%3E%3C/svg%3E">
   <title>Qihao Xing | Data Science &amp; AI</title>
   <style>
     :root {
@@ -48,6 +53,12 @@
 
     a {
       color: inherit;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--yellow);
+      outline-offset: 4px;
     }
 
     ::selection {
@@ -147,6 +158,7 @@
 
     .side-meta p {
       margin: 0 0 10px;
+      overflow-wrap: anywhere;
     }
 
     .version-link {
@@ -241,6 +253,15 @@
       letter-spacing: -0.055em;
     }
 
+    .hero-role {
+      max-width: 680px;
+      margin: 20px 0 0;
+      color: var(--yellow);
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      font-weight: 650;
+      line-height: 1.25;
+    }
+
     .hero-intro {
       max-width: 680px;
       margin: 28px 0 0;
@@ -308,6 +329,7 @@
       padding: 100px clamp(32px, 7vw, 104px);
       border-bottom: 1px solid var(--line);
       background: rgba(244, 244, 239, 0.94);
+      scroll-margin-top: 24px;
     }
 
     .section-title-wrap {
@@ -391,6 +413,24 @@
       font-weight: 750;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+    }
+
+    .project-methods {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .project-methods li {
+      padding: 4px 7px;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      color: var(--muted);
+      font-size: 0.68rem;
+      letter-spacing: 0.04em;
     }
 
     .experience-list {
@@ -618,6 +658,74 @@
         scroll-behavior: auto;
       }
     }
+
+    @media print {
+      @page {
+        margin: 14mm;
+      }
+
+      body {
+        color: #111;
+        background: #fff;
+      }
+
+      body::before,
+      .side-panel,
+      .mobile-header,
+      .hero-image,
+      .hero-links,
+      .contact-actions {
+        display: none !important;
+      }
+
+      .page-shell {
+        display: block;
+      }
+
+      .hero {
+        min-height: auto;
+        color: #111;
+        background: #fff;
+        border-bottom: 2px solid #111;
+      }
+
+      .hero::after {
+        display: none;
+      }
+
+      .hero-content {
+        width: 100%;
+        margin: 0;
+        padding: 10mm 0;
+      }
+
+      .kicker,
+      .hero-intro {
+        color: #333;
+      }
+
+      .facts {
+        background: #fff;
+      }
+
+      .section,
+      .contact-band {
+        padding: 9mm 0;
+        color: #111;
+        background: #fff;
+        break-inside: avoid;
+      }
+
+      .project,
+      .experience {
+        break-inside: avoid;
+      }
+
+      .page-footer {
+        color: #333;
+        background: #fff;
+      }
+    }
   </style>
 </head>
 <body>
@@ -626,7 +734,7 @@
   <div class="page-shell">
     <aside class="side-panel" aria-label="Profile and section navigation">
       <a class="monogram" href="#home" aria-label="Qihao Xing, home">QX</a>
-      <h2 class="side-title">Qihao Xing</h2>
+      <p class="side-title">Qihao Xing</p>
       <p class="side-role">Data Science &amp; AI</p>
       <nav class="side-nav" aria-label="Page sections">
         <a href="#profile">Profile</a>
@@ -638,14 +746,14 @@
       <div class="side-meta">
         <p>Ningbo, China</p>
         <p>sgxqx1@nottingham.edu.cn</p>
-        <a class="version-link" href="index.html">View Version 01</a>
+        <a class="version-link" href="index.html">View AI-generated version</a>
       </div>
     </aside>
 
     <main class="main-panel" id="content">
       <header class="mobile-header">
         <a href="#home">Qihao Xing</a>
-        <a href="index.html">Version 01</a>
+        <a href="index.html">AI-generated version</a>
       </header>
 
       <section class="hero" id="home">
@@ -657,8 +765,9 @@
           referrerpolicy="no-referrer"
         >
         <div class="hero-content">
-          <p class="kicker">Data science &amp; AI / 2026</p>
-          <h1>Turning uncertainty into evidence.</h1>
+          <p class="kicker">Human-designed portfolio / 2026</p>
+          <h1>Qihao Xing</h1>
+          <p class="hero-role">Data science, predictive modeling, and applied AI.</p>
           <p class="hero-intro">
             I am a graduate student in Electronic Communications and Computer Engineering
             at the University of Nottingham Ningbo China, with a foundation in information
@@ -729,6 +838,12 @@
                   predicted 30-day and hourly freight volumes, and used heuristic search
                   to optimize permanent and temporary staffing.
                 </p>
+                <ul class="project-methods" aria-label="Methods used">
+                  <li>Data cleaning</li>
+                  <li>Feature engineering</li>
+                  <li>Forecasting</li>
+                  <li>Optimization</li>
+                </ul>
               </div>
               <span class="project-tag">Forecasting / optimization</span>
             </article>
@@ -742,6 +857,12 @@
                   engineered features; and developed models for credit scoring and risk
                   segmentation with an emphasis on evaluation and business use.
                 </p>
+                <ul class="project-methods" aria-label="Methods used">
+                  <li>Feature selection</li>
+                  <li>Credit scoring</li>
+                  <li>Risk segmentation</li>
+                  <li>Model evaluation</li>
+                </ul>
               </div>
               <span class="project-tag">Risk analytics</span>
             </article>
@@ -755,6 +876,11 @@
                   multiple criteria, and the practical application of fuzzy decision
                   methods to complex problems.
                 </p>
+                <ul class="project-methods" aria-label="Methods used">
+                  <li>Fuzzy decision making</li>
+                  <li>Multi-criteria analysis</li>
+                  <li>Research</li>
+                </ul>
               </div>
               <span class="project-tag">Decision science</span>
             </article>
@@ -772,14 +898,14 @@
 
           <div class="experience-list">
             <article class="experience">
-              <time class="experience-time">2026 - 2027</time>
+              <time class="experience-time">Sep 2026 - Nov 2027</time>
               <div>
                 <h3>MSc Electronic Communications and Computer Engineering</h3>
                 <p>University of Nottingham Ningbo China. Coursework includes AI and intelligent systems, advanced computational engineering, digital signal processing, and programmable logic devices.</p>
               </div>
             </article>
             <article class="experience">
-              <time class="experience-time">2022 - 2026</time>
+              <time class="experience-time">Sep 2022 - Jun 2026</time>
               <div>
                 <h3>BSc Information and Computing Science</h3>
                 <p>Nanchang University. Core study in mathematical analysis, linear algebra, data structures, mathematical modeling, information theory, optimization, and multivariate statistics.</p>
@@ -847,13 +973,14 @@
         <div class="contact-actions">
           <a href="mailto:sgxqx1@nottingham.edu.cn">sgxqx1@nottingham.edu.cn</a>
           <a href="https://github.com/XQH114514" rel="noreferrer">github.com/XQH114514</a>
-          <a href="index.html">View Version 01</a>
+          <a href="https://github.com/XQH114514/Coursework1/blob/main/report.md" rel="noreferrer">Coursework report</a>
+          <a href="index.html">View AI-generated version</a>
         </div>
       </section>
 
       <footer class="page-footer">
         <span>&copy; 2026 Qihao Xing</span>
-        <span>AI-guided portfolio / Version 02</span>
+        <span>Human-designed portfolio / Version 02</span>
       </footer>
     </main>
   </div>

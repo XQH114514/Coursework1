@@ -8,8 +8,9 @@
 ## Published websites
 
 - AI-generated version: https://xqh114514.github.io/Coursework1/
-- AI-guided version: https://xqh114514.github.io/Coursework1/guided.html
+- Human-designed version: https://xqh114514.github.io/Coursework1/guided.html
 - Source repository: https://github.com/XQH114514/Coursework1
+- Report source: https://github.com/XQH114514/Coursework1/blob/main/report.md
 
 ## Development process
 
@@ -34,30 +35,45 @@ Key workflow:
 4. Test image loading, navigation, text wrapping, and horizontal overflow.
 5. Publish the page from the root of the `main` branch using GitHub Pages.
 
-### Version 2: AI-guided page
+### Version 2: Human-designed page
 
-Version 2 used a more detailed design brief. It specified a structured portfolio
-rather than an expressive landing page, including a persistent section index, a
-hero area, profile facts, project records, education and experience, capabilities,
-and contact information.
+Version 2 followed a design specification written before implementation. The
+specification prioritized professional content over decorative effects: a direct
+name-led introduction, scannable profile facts, evidence-oriented project records,
+education, technical methods, qualifications, and contact details. A persistent
+section index supports navigation on larger screens.
 
 The visual direction combined an off-white gridded surface with dark ink, cobalt,
 vermillion, and warm yellow accents. A sticky side panel supports navigation on
 larger screens, while a compact mobile header replaces it on narrow screens.
-Content is arranged in explicit sections and comparison-friendly tables rather
-than the more fluid composition used in Version 1.
+Content is presented in explicit sections rather than the more fluid composition
+used in Version 1. A print stylesheet also provides a clean, resume-like output.
 
 Key workflow:
 
-1. Define the page sections and the order of information.
-2. Specify typography, colors, spacing, navigation behavior, and mobile rules.
-3. Implement both pages as self-contained HTML files.
+1. Decide what information a recruiter or academic reviewer needs first.
+2. Define the page sections, navigation behavior, typography, color, and spacing.
+3. Use Codex for implementation assistance rather than delegating the design
+   decisions to it.
 4. Test responsive behavior at desktop and mobile widths.
-5. Check navigation links, external images, and GitHub Pages deployment.
+5. Check navigation, image loading, privacy-sensitive content, and deployment.
+
+## Git and GitHub workflow
+
+The project is maintained in a GitHub repository on the `main` branch. Changes
+are committed with descriptive messages such as "Add two personal portfolio
+versions", "Update portfolio with resume details", and "Replace personal email
+with university email". GitHub Pages automatically publishes the repository root
+after each update.
+
+This workflow provides a remote backup, makes the change history inspectable, and
+keeps the deployed site synchronized with the versioned source files. README.md
+documents the live links, file structure, local preview command, deployment
+method, and maintenance process.
 
 ## Comparison and evaluation
 
-| Dimension | Version 1: AI-generated | Version 2: AI-guided |
+| Dimension | Version 1: AI-generated | Version 2: Human-designed |
 | --- | --- | --- |
 | Design direction | Expressive, editorial, high contrast | Structured, systematic, information-led |
 | Navigation | Compact top navigation | Persistent side index on desktop |
