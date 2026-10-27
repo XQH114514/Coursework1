@@ -11,7 +11,7 @@ in EEE course.
 > - **Version 2 - Human-designed:** https://xqh114514.github.io/Coursework1/me-designed.html
 > - **Fuzzy decision project profile:** https://xqh114514.github.io/Coursework1/fuzzy-project.html
 >
-> **Supporting document:** https://github.com/XQH114514/Coursework1/blob/main/report.md
+> **Supporting report:** https://xqh114514.github.io/Coursework1/Coursework_Part_I_Report.pdf
 
 Both public website links were verified on 24 October 2026.
 
@@ -40,6 +40,8 @@ a different information hierarchy from Version 1.
 - `project-case.css` - shared styling for applied project pages
 - `profile-photo.jpg` - optimized portrait with metadata removed
 - `report.md` - coursework report draft
+- `Coursework_Part_I_Report.docx` - editable report
+- `Coursework_Part_I_Report.pdf` - submission-ready report
 - `README.md` - repository and maintenance documentation
 
 Each portfolio version is a self-contained HTML file with embedded CSS, keeping
